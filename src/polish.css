@@ -16,3 +16,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media(max-width:600px){
  .hero textarea,.composer textarea,dialog input,dialog select,dialog textarea{font-size:16px}
 }
+
+/* Keep the full firm name on one line on narrow mobile headers. */
+.brand strong{font-size:clamp(15px,4.4vw,20px);letter-spacing:0;white-space:nowrap}
+.brand>span{min-width:0}
