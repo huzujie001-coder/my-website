@@ -1,3 +1,4 @@
+import {consultationError} from './api-errors.mjs';
 import {apiUrl} from './api-url.mjs';
 import React,{useState,useEffect,useRef} from 'react';
 import {LegalMessage,LawLibrary,LegalConsent} from './LegalViews.jsx';
@@ -17,7 +18,7 @@ async function send(text,c=cat,retry=false){
  if(!consent.current){pending.current={text,c,retry};M('consent');return;}
  const t=text.trim();const next=retry?msgs:[...msgs,{role:'user',text:t}];
  C(c);S(next);D('');B(true);CE('');F(false);Latest(null);const controller=new AbortController();timer.current=controller;
- try{const history=next.slice(1).map(m=>({role:m.role==='ai'?'assistant':'user',content:m.text})).slice(-16);const r=await fetch(apiUrl('/api/chat'),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:history,consent:true}),signal:controller.signal});const j=await r.json();if(!r.ok)throw Error(j.error||'暂时无法完成咨询，请重试。');S(v=>[...v,{role:'ai',text:j.answer,citations:j.citations,questions:j.questions,materials:j.materials,scopeNote:j.scopeNote,citationLabel:j.citationLabel}]);C(j.category);Latest(j);F(j.grounded!==false);}catch(e){if(e.name!=='AbortError')CE(e.message||'网络连接失败，请重试。');}finally{B(false);}
+ try{const history=next.slice(1).map(m=>({role:m.role==='ai'?'assistant':'user',content:m.text})).slice(-16);const r=await fetch(apiUrl('/api/chat'),{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:history,consent:true}),signal:controller.signal});const j=await r.json();if(!r.ok)throw Error(j.error||'暂时无法完成咨询，请重试。');S(v=>[...v,{role:'ai',text:j.answer,citations:j.citations,questions:j.questions,materials:j.materials,scopeNote:j.scopeNote,citationLabel:j.citationLabel}]);C(j.category);Latest(j);F(j.grounded!==false);}catch(e){if(e.name!=='AbortError')CE(consultationError(e));}finally{B(false);}
 }
 async function copy(){try{await navigator.clipboard.writeText(summary);J('已复制咨询小结，可粘贴给律师');setTimeout(()=>J(''),2500);}catch{M('summary');}}
 function submit(e){e.preventDefault();if(!/^1[3-9]\d{9}$/.test(phone)){E('请输入11位有效手机号');return;}if(!agree){E('请先勾选电话回访授权');return;}R(v=>[{name:name||'访客',phone:phone.slice(0,3)+'****'+phone.slice(-4),slot},...v]);U(true);T('');N('');A(false);}
