@@ -18,7 +18,7 @@ header .contact{background:transparent;border-color:#8696AA;color:var(--paper)}
 textarea,input,select,.hero textarea{background:var(--paper);border-color:#AAB7C7;color:var(--ink)}
 textarea:focus,input:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 2px #142D4E18}
 textarea::placeholder,input::placeholder{color:#6B7787}
-.hero-head img{filter:grayscale(1) invert(1);mix-blend-mode:multiply;opacity:.85}
+.hero-head img{filter:none;mix-blend-mode:normal;opacity:1}
 .link,.inline-citation{color:#24466F}
 .disclaimer,.scope-note,.muted{color:#5B6B7D}
 .categories button{background:var(--paper);border-color:var(--line);color:var(--navy);box-shadow:0 2px 7px #142D4E06}
