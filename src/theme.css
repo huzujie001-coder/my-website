@@ -1,0 +1,67 @@
+/* Sichuan Rongcheng: navy, white and neutral gray. */
+:root{
+ --navy:#142D4E;--navy-dark:#0E223C;--paper:#FFFFFF;--surface:#F2F4F7;
+ --ink:#172B45;--muted:#596879;--line:#D4DCE5;--gold:var(--navy);
+ color:var(--ink);background:#E8EDF2;color-scheme:light;
+}
+body{background:#E8EDF2;background-image:none}
+button:hover{filter:brightness(.94)}
+button:focus-visible{outline-color:var(--navy)}
+p{color:#465568}
+.shell{background:var(--paper);box-shadow:0 0 60px #142D4E12}
+header{background:var(--navy-dark);border-bottom-color:var(--navy)}
+.brand,.brand svg{color:var(--paper)}
+.brand small{color:#D5DDE7}
+.outline{background:var(--paper);border-color:#A9B6C6;color:var(--navy)}
+header .contact{background:transparent;border-color:#8696AA;color:var(--paper)}
+.primary{background:var(--navy);border-color:var(--navy);color:var(--paper);box-shadow:0 4px 12px #142D4E18}
+textarea,input,select,.hero textarea{background:var(--paper);border-color:#AAB7C7;color:var(--ink)}
+textarea:focus,input:focus,select:focus{border-color:var(--navy);box-shadow:0 0 0 2px #142D4E18}
+textarea::placeholder,input::placeholder{color:#6B7787}
+.hero-head img{filter:grayscale(1) invert(1);mix-blend-mode:multiply;opacity:.85}
+.link,.inline-citation{color:#24466F}
+.disclaimer,.scope-note,.muted{color:#5B6B7D}
+.categories button{background:var(--paper);border-color:var(--line);color:var(--navy);box-shadow:0 2px 7px #142D4E06}
+.categories small,.team small,.faq-row small{color:#5B697A}
+.lawyer{background:var(--surface);border-color:var(--line);border-left-color:var(--navy)}
+.insignia{background:#E1E7EE;color:var(--navy)}
+.faq{background:var(--paper);border-color:var(--line)}
+.faq-row{border-bottom-color:var(--line)}
+.faq-row em,.badge{background:#EDF1F5;border-color:#BAC6D3;color:var(--navy)}
+footer svg,footer strong,.gold{color:var(--navy)}
+footer button{color:#536277}
+nav{background:#FFFFFFF5;border-top-color:var(--line)}
+nav button{color:#687587}nav button.active{color:var(--navy)}
+.chat-page{background:var(--surface)}
+.message>div{background:var(--paper);color:var(--ink);border:1px solid #DDE3EB}
+.message>svg{color:var(--navy)}
+.message.user>div{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.thinking{color:#52657C}
+.summary,.record{background:var(--paper);border-color:var(--line);color:var(--ink)}
+.summary{border-left-color:var(--navy)}
+.summary hr{border-top-color:var(--line)}
+.composer{background:var(--surface)}
+.demo{background:#E8EDF3;color:#45566B}
+.backdrop{background:#0E223C99}
+dialog{background:var(--paper);border-color:#C2CCD9;color:var(--ink);box-shadow:0 24px 80px #0E223C33}
+dialog .close{color:#506279}
+.modal-symbol{color:var(--navy)}
+.qr-demo{background:#EDF1F5;color:var(--navy)}
+label small,.checkbox{color:#566579}
+.required{color:var(--navy)}
+.checkbox input{accent-color:var(--navy)}
+.error{color:#31465F}
+.success>svg{color:var(--navy)}
+.toast{background:var(--navy);color:var(--paper);box-shadow:0 5px 25px #142D4E26}
+.knowledge-entry{background:#F0F3F7;color:var(--navy);border-color:#C7D1DF}
+.message .answer-extra h3{color:var(--navy)}
+.citations{border-top-color:var(--line)}
+.citations h3{color:var(--navy)}
+.citations details{background:#F5F7F9;border-color:#CBD5E1}
+.citations summary,.citations summary strong,.citation-index{color:var(--navy)}
+.citations .law-text{color:#34465D}
+.citation-meta{color:#5B6B7D}
+.citations a,.policy-link{color:#24466F}
+.chat-error{background:#E9EDF2;border-color:#8999AD}
+.chat-error p{color:#253C58}
+.library-eyebrow,.library-count{color:var(--navy)}

@@ -9,3 +9,5 @@ createRoot(document.getElementById("root")).render(
   </React.StrictMode>,
 );
 import "./polish.css";
+
+import "./theme.css";
