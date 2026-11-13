@@ -65,3 +65,7 @@ label small,.checkbox{color:#566579}
 .chat-error{background:#E9EDF2;border-color:#8999AD}
 .chat-error p{color:#253C58}
 .library-eyebrow,.library-count{color:var(--navy)}
+
+/* Use the supplied official wordmark unchanged; crop only its surrounding white margin in the layout. */
+.brand-logo{display:block;position:relative;overflow:hidden;width:clamp(170px,56vw,250px);height:44px;background:#fff;border-radius:7px}
+.brand-logo img{display:block;position:absolute;width:145%;height:auto;max-width:none;left:-10%;top:50%;transform:translateY(-50%)}
